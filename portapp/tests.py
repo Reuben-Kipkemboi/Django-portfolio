@@ -25,3 +25,19 @@ class PersonTestClass(TestCase):
         user_persons = Person.objects.all()
         self.assertTrue(len(user_persons),1)
         
+
+#Projects tests
+class ProjectTestClass(TestCase):
+    def setUp(self):
+        self.reuben =Person(first_name = 'Reuben', last_name ='Rotich')
+        self.reuben.save()
+        
+    def setUp(self):
+        self.new_project = Project(name = "Portfolio", description="my braggable projects", person=self.reuben)
+        
+        self.new_project.save()
+        
+        
+    def tearDown(self):
+        Person.objects.all().delete()
+        Project.objects.all().delete()

@@ -16,12 +16,14 @@ class Person(models.Model):
     def delete_person(self):
         self.delete()
     
-    
-    
-    
-    
+
 class Project(models.Model):
     name = models.CharField(max_length =60)
     description = models.TextField()
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    
+    
+    def __str__(self):
+        return self.name
 
+    
