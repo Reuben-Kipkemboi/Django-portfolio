@@ -21,6 +21,7 @@ class Project(models.Model):
     name = models.CharField(max_length =60)
     description = models.TextField()
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
+    project_screenshot = models.ImageField(upload_to = 'photo/',null=True)
     
     
     def __str__(self):
