@@ -9,6 +9,13 @@ class Person(models.Model):
         return self.first_name
     #the str is just a basic way that helps if we want to have a view of anything that we would like to query
     
+    #lets save our person||Myself [function to save person to the db]
+    def save_person(self):
+        self.save()
+        
+    def delete_person(self):
+        self.delete()
+    
     
     
     
