@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 
 # Create your models here.
@@ -21,7 +22,7 @@ class Project(models.Model):
     name = models.CharField(max_length =60)
     description = models.TextField()
     person = models.ForeignKey(Person, on_delete=models.CASCADE)
-    project_screenshot = models.ImageField(upload_to = 'photo/',null=True)
+    project_screenshot = models.ImageField(upload_to = 'photo/',default='photo/default.jpg')
     
     
     def __str__(self):
