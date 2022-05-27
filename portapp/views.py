@@ -17,4 +17,7 @@ def project(request):
     print(project)
     return render(request,'projects.html', {"project":project})
 
+def certifications(request):
+    return render(request, 'certifications.html')
+
 
