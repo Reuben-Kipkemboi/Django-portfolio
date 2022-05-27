@@ -2,39 +2,30 @@
 {% load static %}
 {% block content %}
 {{ block.super}}
-<div class="row">
-    <h3 class="text-center" id="head">My Projects</h3>
-    <!-- Looping through news   -->
-    <div class="container">
+<h3 class="text-center" id="head">My Projects</h3>
+<!-- Looping through news   -->
 
-        {% for one_project in project %}
-
-        <div class="row">
-
-
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col mb-4">
-                    <div class="card shadow">
-                        <img src="{{one_project.project_screenshot.url}}" class="card-img-top" alt="project image">
-                        <div class="card-body">
-                            <h5 class="card-title" id="title">{{ one_project.name }}</h5>
-                            <p class="card-text"id="text">{{ one_project.description}}</p>
-                        </div>
-                        <div class="btns m-1">
+<div class="row row-cols-1 row-cols-md-3">
+    {% for one_project in project %}
+    <div class="col mb-4">
+        <div class="card shadow">
+            <img src="{{one_project.project_screenshot.url}}" class="card-img-top" alt="project image">
+            <div class="card-body">
+                <h5 class="card-title" id="title">{{ one_project.name }}</h5>
+                <p class="card-text" id="text">{{ one_project.description}}</p>
+            </div>
+            <!-- <div class="btns m-1">
                             <a href=""><button class="btn" id="oneone">View On Github </button></a>
                             <a href=""><button class="btn" id="twotwo">View Site</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+                        </div> -->
         </div>
-
-        {% empty %}
-        <div class="row">
-            <h2 class="text-center">No projects for now..Am working to have them completed</h2>
-        </div>
-        {% endfor %}
-
     </div>
-    {% endblock %}
+
+    {% empty %}
+    <div class="row">
+        <h2 class="text-center">No projects for now..Am working to have them completed</h2>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
