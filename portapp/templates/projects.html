@@ -2,8 +2,8 @@
 {% load static %}
 {% block content %}
 {{ block.super}}
-<div class="container-fluid"id="container">
-    <h3 class="text-center" id="head" style="color: #B89FF1;">My Projects</h3>
+<div class="container-fluid" id="container">
+    <h3 class="text-center fw-bold" id="head" style="color: #191F19;">My sample Projects</h3>
     <!-- Looping through news   -->
 
     <div class="row row-cols-1 row-cols-md-3">
@@ -28,6 +28,32 @@
         </div>
         {% endfor %}
 
+
+
+    </div>
+    <div id="bottom">
+        <div class="row" id="more">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" id="moreprojects">
+                <h2 class="my">My Projects</h2>
+                <p class="personal">Get more Personal Interesting
+                    <br>Projects done by me
+                </p>
+                <a href="https://github.com/Reuben-Kipkemboi"><button id="view">View My Github</button></a>
+            </div>
+            <div class="col-md-4"></div>
+
+
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" id="etcetera">
+                <p id="white">Contact me</p>
+                
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        
     </div>
 </div>
 {% endblock %}
