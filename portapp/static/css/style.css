@@ -12,6 +12,9 @@
     /* background:linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%),url("images/bg1.jpg"); */
     
 }
+#cardrow{
+    margin-right: 3%;
+}
 .header{
     margin-top: 10%;
     padding: 5%;
@@ -60,7 +63,6 @@
     outline: none;
 }
 #contact{
-    color: #ffffff;
     border: 1px solid #BC5B4E;
     background: linear-gradient(to left, #494453 50%, #ffffff 50%) right;
     background-size: 200%;
@@ -68,7 +70,7 @@
     border-radius: 3px;
 }
 #contact:hover{
-    color: #000000;
+    color: #ffffff;
     background-position: left;
 
 }
@@ -85,46 +87,39 @@
 
 }
 /*Row 2 styling  */
-#row2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 5%;
-}
 #p1{
     border-top: 2px solid #7377C0;
     height: 250px;
-    margin-top: 3%;
+    margin: 3%;
     background-color: #1D1D1D;
     padding: 20px;
 }
-#p1 .python{
+#p1 .python, #p2 .python,#p3 .python{
     color:#F8907F;
     padding: 10px;
+    border-bottom: 1px solid #7377C0;
 
 }
-#p1 .par1{
+#p1 .par1,#p2 .par1,#p3 .par1{
     color:#B89FF1;
 
 }
-#p1 .desc{
+#p1 .desc,#p2 .desc,#p3 .desc{
     color:#ffffff;
 
 }
 #p2{
     border-top: 2px solid #F8907F;
-    width: 28%;
     height: 250px;
-    margin-top: 3%;
+    margin: 3%;
     background-color: #1D1D1D;
     padding: 20px;
 
 }
 #p3{
     border-top: 2px solid #B89FF1;
-    width: 28%;
     height: 250px;
-    margin-top: 3%;
+    margin: 3%;
     background-color: #1D1D1D;
     padding: 20px;
 
@@ -179,5 +174,8 @@
     color: #ffffff; 
     background-position: left;
 }
-
+#container{
+    background-color: #494453;
+    height: 100vh;
+}
 
