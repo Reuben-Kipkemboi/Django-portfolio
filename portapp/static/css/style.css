@@ -133,7 +133,51 @@
 /* projects */
 #title, #text, #texts{
     color: #000000;
+    
+}
+#text, #texts{
+    font-size:2vh;
 }
 #head{
     text-align: center;
 }
+
+#oneone{
+    /* background-color: #7377C0; */
+    color: #ffffff;
+    text-align: center;
+    width: 30%;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 8vh;
+    background: linear-gradient(to left, #7377C0 50%, #050A30 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+}
+#oneone:hover{
+    color: #000000;
+    background-position: left;
+    color: #ffffff;
+
+}
+#twotwo{
+    /* background-color: #B89FF1; */
+    height: 7vh;
+    color: #ffffff;
+    text-align: center;
+    width: 25%;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 8vh;
+    background: linear-gradient(to left, #B89FF1 50%, #000000 50%) right;
+    background-size: 200%;
+    transition: .4s ease-out;
+}
+#twotwo:hover{
+    color: #ffffff; 
+    background-position: left;
+}
+
+
