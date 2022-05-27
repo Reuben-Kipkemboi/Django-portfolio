@@ -61,7 +61,6 @@
 }
 #contact{
     color: #ffffff;
-    /* right: 0; */
     border: 1px solid #BC5B4E;
     background: linear-gradient(to left, #494453 50%, #ffffff 50%) right;
     background-size: 200%;
@@ -129,4 +128,12 @@
     background-color: #1D1D1D;
     padding: 20px;
 
+}
+
+/* projects */
+#title, #text, #texts{
+    color: #000000;
+}
+#head{
+    text-align: center;
 }

@@ -3,26 +3,38 @@
 {% block content %}
 {{ block.super}}
 <div class="row">
-    <h3 class="text-center">My Projects</h3>
+    <h3 class="text-center" id="head">My Projects</h3>
     <!-- Looping through news   -->
-    {% for one_project in project %}
+    <div class="container">
 
-    <div class="row">
-        <!-- displaying projects that i did -->
-        <div class="c">
-            <h2 class="text-center"> {{ one_project.name }} </h2>
-            <h2 class="text-center"> {{ one_project.description }} </h2>
+        {% for one_project in project %}
+
+        <div class="row">
+
+
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col mb-4">
+                    <div class="card shadow">
+                        <img src="{{one_project.project_screenshot.url}}" class="card-img-top" alt="project image">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ one_project.name }}</h5>
+                            <p class="card-text">{{ one_project.description}}</p>
+                        </div>
+                        <div class="btns">
+                            <a href=""><button class="btn" id="oneone">View On Github </button></a>
+                            <a href=""><button class="btn" id="twotwo">View Site</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-            <img src="{{one_project.project_screenshot.url}}" class="img-responsive" alt="Image">
+
+        {% empty %}
+        <div class="row">
+            <h2 class="text-center">No projects for now..Am working to have them completed</h2>
         </div>
+        {% endfor %}
+
     </div>
-
-    {% empty %}
-    <div class="row">
-        <h2 class="text-center">No projects for now..Am working to have them completed</h2>
-    </div>
-    {% endfor %}
-
-
     {% endblock %}
